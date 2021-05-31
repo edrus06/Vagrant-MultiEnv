@@ -17,6 +17,7 @@ echo "Create backup of nginx.conf"
 sudo systemctl stop nginx.service
 
 sudo cp /etc/nginx/nginx.conf /tmp/nginx-conf-$(date +"%m-%d-%y-%T")
+cd /etc/nginx/
 sudo git clone  https://github.com/edrus06/Nginx.git
 sudo cp /etc/nginx/Nginx/nginx.conf /etc/nginx/
 
