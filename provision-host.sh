@@ -17,3 +17,6 @@ echo "Create backup of nginx.conf"
 sudo systemctl stop nginx.service
 
 sudo cp /etc/nginx/nginx.conf /tmp/nginx-conf-$(date +"%m-%d-%y-%T")
+
+echo "Machine: web"$1 >> /usr/share/nginx/html/index.html
+echo 'Provision web'$1 'complete'
