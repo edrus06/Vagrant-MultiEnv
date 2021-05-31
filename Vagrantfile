@@ -5,7 +5,10 @@ Vagrant.configure("2") do |config|
     lb1.vm.hostname = "lb1.vagrant.vm"
     lb1.vm.network "private_network", ip: "10.0.0.10"
     lb1.vm.network "forwarded_port", guest: 80, host: 8080
-    lb1.vm.provision "shell", path: "https://raw.githubusercontent.com/edrus06/Vagrant-MultiEnv/main/provision.sh"
+    lb1.vm.provision :shell do |shell|
+      shell.args = ["`$host`","`$remote_addr`","`$proxy_add_x_forwarded_for`"]
+      shell.path: "https://raw.githubusercontent.com/edrus06/Vagrant-MultiEnv/main/provision.sh"
+    end
   end
 
   config.vm.define "web1" do |web1|
