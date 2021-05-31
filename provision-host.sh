@@ -19,4 +19,8 @@ sudo systemctl stop nginx.service
 sudo cp /etc/nginx/nginx.conf /tmp/nginx-conf-$(date +"%m-%d-%y-%T")
 
 echo "Machine: web"$1 >> /usr/share/nginx/html/index.html
+
+sudo systemctl start nginx.service
 echo 'Provision web'$1 'complete'
+
+

@@ -14,7 +14,7 @@ Vagrant.configure("2") do |config|
     web1.vm.network "private_network", ip: "10.0.0.11"
     web1.vm.provision :shell do |shell|
       shell.args = "1"
-      shell.path = "https://raw.githubusercontent.com/edrus06/Vagrant-MultiEnv/main/provision.sh"
+      shell.path = "https://raw.githubusercontent.com/edrus06/Vagrant-MultiEnv/main/provision-host.sh"
     end
   end
 
@@ -25,7 +25,7 @@ Vagrant.configure("2") do |config|
     web2.vm.network "private_network", ip: "10.0.0.12"
     web2.vm.provision :shell do |shell|
       shell.args = "2"
-      shell.path = "https://raw.githubusercontent.com/edrus06/Vagrant-MultiEnv/main/provision.sh"
+      shell.path = "https://raw.githubusercontent.com/edrus06/Vagrant-MultiEnv/main/provision-host.sh"
     end
   end
 
