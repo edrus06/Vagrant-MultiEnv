@@ -3,7 +3,7 @@ Vagrant.configure("2") do |config|
   web.vm.box = "centos/7"
   web.vm.hostname = "web.vagrant.vm"
     web.vm.provision :shell do |shell|
-      shell.name = "Provision Scrpt 1"
+      shell.name = "Provision Script 1"
       shell.privileged =  "false"
       shell.args = ["test1","test2","test3"]
       shell.path = "https://raw.githubusercontent.com/edrus06/Vagrant-MultiEnv/main/provision.sh"
