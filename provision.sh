@@ -68,9 +68,6 @@ http {
         # Load configuration files for the default server block.
         include /etc/nginx/default.d/*.conf;
         location / {
-          proxy_set_header Host $1;
-          proxy_set_header X-Real-IP $2;
-          proxy_set_header X-Forwarded-For $3;
           proxy_pass http://testapp;
         }
         #location / {

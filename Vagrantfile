@@ -7,7 +7,7 @@ Vagrant.configure("2") do |config|
     lb1.vm.network "forwarded_port", guest: 80, host: 8080
     lb1.vm.provision :shell do |shell|
       shell.args = ["`$host`","`$remote_addr`","`$proxy_add_x_forwarded_for`"]
-      shell.path: "https://raw.githubusercontent.com/edrus06/Vagrant-MultiEnv/main/provision.sh"
+      shell.path = "https://raw.githubusercontent.com/edrus06/Vagrant-MultiEnv/main/provision.sh"
     end
   end
 
