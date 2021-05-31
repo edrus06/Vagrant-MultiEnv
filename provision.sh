@@ -1,3 +1,6 @@
 #!/bin/bash
 
-echo "Provision complere" $1 $2 $3
+echo "Provision Load Balanced LB1"
+sudo yum clean all
+sudo yum update -y
+sudo yum install -y yum-utils
