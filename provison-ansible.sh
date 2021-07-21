@@ -1,7 +1,10 @@
 #!/bin/bash
 
-echo "Provision Load Balanced LB1"
+echo "Provision Ansible Hosts"
 sudo yum clean all
 sudo yum update -y
 sudo yum install -y yum-utils
 sudo yum install epel-release -y 
+
+
+sudo yum install ansible
