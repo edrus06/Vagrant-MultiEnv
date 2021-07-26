@@ -10,7 +10,7 @@ sudo yum install epel-release -y
 sudo yum install vim -y 
 
 sudo useradd -m ansi_deploy
-sudo useradd -aG vagrant ansi_deploy
+sudo usermod -aG vagrant ansi_deploy
 
 
 
