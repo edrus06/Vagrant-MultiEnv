@@ -8,6 +8,7 @@ sudo yum install epel-release -y
 
 
 sudo yum install vim -y 
+sudo yum install net-tools -y
 
 sudo useradd -m ansi_deploy
 sudo usermod -aG vagrant ansi_deploy
